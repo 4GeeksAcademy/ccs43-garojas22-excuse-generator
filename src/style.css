@@ -1,1 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+h6 {
+  margin-top: -5px;
+  height: 25px;
+}
