@@ -18,8 +18,77 @@
     ></script>
     <FontAwesomeIcon icon="fa-solid fa-rotate" size="xl" spin />
     <FontAwesomeIcon icon="fa-brands fa-square-js" />
+    
+    <script language="JavaScript"> 
+      function gen(){ 
+        let quien = [
+    "bruno",
+    "jose",
+    "fuad",
+    "jorge"
+  ];
+
+  let queHizo = [
+    "escondio",
+    "robo",
+    "destrozo",
+    "vendio",
+    "daño",
+    "oculto"
+  ];
+  let evitar = [
+    "mi proyecto",
+    "la laptop",
+    "el carro",
+    "el play ",
+    "mi telefono"
+  ];
+  let cuando = [
+    "ayer",
+    "el lunes",
+    "el martes",
+    "el miercoles",
+    "hace 2 semanas"
+  ];
+  let random_quien = Math.floor(Math.random() * quien.length);
+  let random_queHizo = Math.floor(Math.random() * queHizo.length);
+  let random_evitar = Math.floor(Math.random() * evitar.length);
+  let random_cuando = Math.floor(Math.random() * cuando.length);
+  document.getElementById("resultado").innerHTML =
+    "<div class=' alert text-bg-success h-50'><h6 id='xd'>" +
+    quien[random_quien] +
+    " " +
+    queHizo[random_queHizo] +
+    " " +
+    evitar[random_evitar] +
+    " " +
+    cuando[random_cuando] +
+    "</h6></div>";
+}
+      </script>
+
   </head>
 
-  <body class="">
+  <body class="bg-black">
+    <div class="container-fluid p-5">
+      <h1 class="text-primary">
+        <i class="fa-brands fa-square-js fa-xl" style="color: #005eff;"></i> -
+        excuse generator
+      </h1>
+      <div class="d-flex">
+        <div class="py-4">
+          <button class="btn btn-primary btn btn-block" onclick="gen()">
+          <i class="fa-solid fa-rotate fa-spin"></i>
+        </div>
+        <div class="p-4" id="resultado"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
   </body>
 </html>
